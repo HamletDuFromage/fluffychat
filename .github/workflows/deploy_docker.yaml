@@ -29,7 +29,7 @@ jobs:
         run: echo "latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))" >> $GITHUB_ENV
 
       - name: Print the latest tag
-        run: echo "Latest tag is: ${{ env.latest_tag }}"
+        run: echo "Latest tag is ${{ env.latest_tag }}""
 
       - name: Check out the latest tag
         run: git checkout tags/${{ env.latest_tag }}
