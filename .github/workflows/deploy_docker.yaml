@@ -1,12 +1,10 @@
 name: Update Docker Image on Upstream Tag Change
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *" # Check daily at midnight
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   update-docker-image:
